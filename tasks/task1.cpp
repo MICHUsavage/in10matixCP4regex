@@ -9,20 +9,3 @@
 //
 // Expected output:
 // "The *** chased the *** while the *** watched. Later the *** and the *** fell asleep."
-
-#include <iostream>
-#include <regex>
-#include <string>
-
-int main() {
-
-    std::string text = "The cat chased the mouse while the dog watched. Later the cat and the dog fell asleep.";
-
-    std::regex pattern(R"(cat|dog|mouse)");
-
-    std::string result = std::regex_replace(text, pattern, "***");
-
-    std::cout << "Modified text: " << result << std::endl;
-
-    return 0;
-}
